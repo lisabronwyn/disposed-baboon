@@ -159,8 +159,30 @@ function slasher(arr, howMany) {
 }
 ```
 ##Mutations 
+```javascript
+function mutation(arr) {
+var firstString = arr[0].toLowerCase();
+var secondString = arr[1].toLowerCase();
+for (var i = 0; i < secondString.length; i++) {
+if (firstString.indexOf(secondString.charAt(i)) == -1) {
+return false;
+}
+}
+return true;
+}
+mutation (["hello", "hey"]);
+```
 
 ##Falsy Bouncer 
+```javascript
+
+function bouncer(arr) {
+  var newArray = arr.filter(Boolean);
+  return newArray;
+}
+
+bouncer([7, "ate", "", false, 9]);
+```
 
 ##Seek and Destroy 
 
