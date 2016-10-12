@@ -46,12 +46,9 @@ function palindrome(str) {
  
  var splitPalindrome = lowerCaseStr.split('').reverse().join('');
  
-  console.log(splitPalindrome.str);
  return lowerCaseStr === splitPalindrome;
  
 }
-
-
 
 palindrome("eye");
 ```
@@ -64,8 +61,10 @@ function findLongestWord(str) {
 
   var longestWord = 0;
 
-  for(var i = 0; i < strSplit.length; i++){
-    if(strSplit[i].length > longestWord){
+  for(var i = 0; i < strSplit.length; i++) {
+  
+    if(strSplit[i].length > longestWord) {
+    
 	longestWord = strSplit[i].length; 
      }
   }
@@ -79,12 +78,17 @@ findLongestWord("The quick brown fox jumped over the lazy dog");
 ##Title Case a Sentence 
 ```javascript
 function titleCase(str) {
+
   str = str.toLowerCase().split(' ');
+  
   for (var i = 0; i < str.length; i++) {
-    str[i] = str[i].charAt(0).toUpperCase() + str[i].slice(1); 
+  
+    str[i] = str[i].charAt(0).toUpperCase() + str[i].slice(1);
+    
   }
   
   return str.join(' ');
+  
 }
 
 titleCase("I'm a little tea pot");
@@ -93,13 +97,18 @@ titleCase("I'm a little tea pot");
 ##Return Largest Numbers in Arrays 
 ```javascript
 function largestOfFour(arr) {
-var results = [];
-for (var n = 0; n < arr.length; n++) {
-var largestNumber = 0;
-for (var sb = 0; sb < arr[n].length; sb++) {
-if (arr[n][sb] > largestNumber) {
-largestNumber = arr[n][sb];
-}
+
+  var results = [];
+  
+  for (var n = 0; n < arr.length; n++) {
+  
+  var largestNumber = 0;
+  
+  for (var sb = 0; sb < arr[n].length; sb++) {
+  
+    if (arr[n][sb] > largestNumber) {
+      largestNumber = arr[n][sb];
+  }
 }
 
 results[n] = largestNumber;
@@ -113,137 +122,152 @@ return results;
 ##Confirm the Ending 
 ```javascript
 function confirmEnding(str, target) {
-// "Never give up and good luck will find you."
-// -- Falcor
+
 return target === str.substr(str.length - target.length);
+
 }
 
 confirmEnding("Bastian", "n");
-```
-##Repeat a string repeat a string 
+##
+Repeat a string repeat a string
 ```javascript
-function repeatStringNumTimes(str, num) {
-var accumulatedStr = '';
 
-while (num > 0) {
-accumulatedStr += str;
-num--;
+function repeatStringNumTimes( str, num ) {
+  var accumulatedStr = '';
+
+  while ( num > 0 ) {
+    accumulatedStr += str;
+    num--;
+  }
+
+  return accumulatedStr;
 }
 
-return accumulatedStr;
-}
 ```
-
-##Truncate a string 
+##
+Truncate a string
 ```javascript
-function truncateString(str, num) {
-  if (str.length <= num) {
+
+function truncateString( str, num ) {
+  if ( str.length <= num ) {
     return str;
   } else {
-    return str.slice(0, num > 3 ? num - 3 : num) + '...';
+    return str.slice( 0, num > 3 ? num - 3 : num ) + '...';
   }
 }
-truncateString("A-tisket a-tasket A green and yellow basket", 11);
+truncateString( "A-tisket a-tasket A green and yellow basket", 11 );
 
 ```
-##Chunky Monkey 
-```javascript
-function chunkArrayInGroups(arr, size) {
-	var chunkeyMonkeh = [],
-	i = 0,
-	j = arr.length;
-while (i < j) {
-	chunkeyMonkeh.push(arr.slice(i, i += size));
-	}
-	return chunkeyMonkeh;
-}
-
-chunkArrayInGroups(["a", "b", "c", "d"], 2);
-```
-##Slasher Flick 
-```javascript
-function slasher(arr, howMany) {
-  return arr.slice(howMany);
-}
-```
-##Mutations 
-```javascript
-function mutation(arr) {
-var firstString = arr[0].toLowerCase();
-var secondString = arr[1].toLowerCase();
-for (var i = 0; i < secondString.length; i++) {
-if (firstString.indexOf(secondString.charAt(i)) == -1) {
-return false;
-}
-}
-return true;
-}
-mutation (["hello", "hey"]);
-```
-
-##Falsy Bouncer 
+##
+Chunky Monkey
 ```javascript
 
-function bouncer(arr) {
-  var newArray = arr.filter(Boolean);
+function chunkArrayInGroups( arr, size ) {
+  var chunkeyMonkeh = [],
+    i = 0,
+    j = arr.length;
+  while ( i < j ) {
+    chunkeyMonkeh.push( arr.slice( i, i += size ) );
+  }
+  return chunkeyMonkeh;
+}
+
+chunkArrayInGroups( [ "a", "b", "c", "d" ], 2 );
+```
+##
+Slasher Flick
+```javascript
+
+function slasher( arr, howMany ) {
+  return arr.slice( howMany );
+}
+```
+##
+Mutations
+```javascript
+
+function mutation( arr ) {
+  var firstString = arr[ 0 ].toLowerCase();
+  var secondString = arr[ 1 ].toLowerCase();
+  for ( var i = 0; i < secondString.length; i++ ) {
+    if ( firstString.indexOf( secondString.charAt( i ) ) == -1 ) {
+      return false;
+    }
+  }
+  return true;
+}
+mutation( [ "hello", "hey" ] );
+
+```
+##
+Falsy Bouncer
+```javascript
+
+function bouncer( arr ) {
+  var newArray = arr.filter( Boolean );
   return newArray;
 }
 
-bouncer([7, "ate", "", false, 9]);
-```
+bouncer( [ 7, "ate", "", false, 9 ] );
 
-##Seek and Destroy 
+```
+##
+Seek and Destroy
 ```javascript
-function destroyer(arr) {
-  var args = Array.prototype.slice.call(arguments);
-  args.splice(0,1);
-  return arr.filter(function(element) {
-    return args.indexOf(element) === -1;
-  });
- 
+
+function destroyer( arr ) {
+  var args = Array.prototype.slice.call( arguments );
+  args.splice( 0, 1 );
+  return arr.filter( function( element ) {
+    return args.indexOf( element ) === -1;
+  } );
+
   // Remove all the values
 }
 
-destroyer([1, 2, 3, 1, 2, 3], 2, 3);
+destroyer( [ 1, 2, 3, 1, 2, 3 ], 2, 3 );
+
 ```
+##
+Where do I belong ?
+```  javascript
 
-##Where do I belong?
-```javascript
-function getIndexToIns(arr, num) {
-  arr.sort(function (a, b) {
-      return a - b;
-  });
-  
-for (var a = 0; a < arr.length; a++) {
-  if (arr[a] >= num)
-    return parseInt(a);
-}
+function getIndexToIns( arr, num ) {
+  arr.sort( function( a, b ) {
+    return a - b;
+  } );
 
-    return arr.length;
+  for ( var a = 0; a < arr.length; a++ ) {
+    if ( arr[ a ] >= num )
+      return parseInt( a );
+  }
+
+  return arr.length;
 }
-getIndexToIns([40, 60], 50);
+getIndexToIns( [ 40, 60 ], 50 );
+
 ```
-
-##Caesars Cipher 
+##
+Caesars Cipher
 ```javascript
 
-function rot13(str) {
+function rot13( str ) {
   // Split str into a character array
-  return str.split('')
-  // Iterate over each character in the array
-    .map.call(str, function(char) {
+  return str.split( '' )
+    // Iterate over each character in the array
+    .map.call( str, function( char ) {
       // Convert char to a character code
-      x = char.charCodeAt(0);
+      x = char.charCodeAt( 0 );
       // Checks if character lies between A-Z
-      if (x < 65 || x > 90) {
-        return String.fromCharCode(x);  // Return un-converted character
+      if ( x < 65 || x > 90 ) {
+        return String.fromCharCode( x ); // Return un-converted character
       }
       //N = ASCII 78, if the character code is less than 78, shift forward 13 places
-      else if (x < 78) {
-        return String.fromCharCode(x + 13);
+      else if ( x < 78 ) {
+        return String.fromCharCode( x + 13 );
       }
       // Otherwise shift the character 13 places backward
-      return String.fromCharCode(x - 13);
-    }).join('');  // Rejoin the array into a string
+      return String.fromCharCode( x - 13 );
+    } ).join( '' ); // Rejoin the array into a string
 }
 ```
