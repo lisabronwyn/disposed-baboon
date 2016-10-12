@@ -187,5 +187,20 @@ bouncer([7, "ate", "", false, 9]);
 ##Seek and Destroy 
 
 ##Where do I belong?
+```javascript
+function getIndexToIns(arr, num) {
+  arr.sort(function (a, b) {
+      return a - b;
+  });
+  
+for (var a = 0; a < arr.length; a++) {
+  if (arr[a] >= num)
+    return parseInt(a);
+}
+
+    return arr.length;
+}
+getIndexToIns([40, 60], 50);
+```
 
 ##Caesars Cipher 
