@@ -37,13 +37,21 @@ function factorialize(num) {
 
 ##Check for Palindromes
 ```javascript
+
 function palindrome(str) {
-  var re = /[\W_]/g;
-  var hatersGonHate = str.toLowerCase().replace(re, '');
-  var splitPalindrome = hatersGonHate.split('').reverse().join('');
-  
-  return hatersGonHate === splitPalindrome;
-} 
+
+ var alphabeticalOnlyRe = /[\W_]/g; 
+ 
+ var lowerCaseStr = str.toLowerCase().replace(re, '');
+ 
+ var splitPalindrome = lowerCaseStr.split('').reverse().join('');
+ 
+  console.log(splitPalindrome.str);
+ return lowerCaseStr === splitPalindrome;
+ 
+}
+
+
 
 palindrome("eye");
 ```
