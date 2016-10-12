@@ -139,15 +139,31 @@ truncateString("A-tisket a-tasket A green and yellow basket", 11);
 
 ```
 ##Chunky Monkey 
+```javascript
+function chunkArrayInGroups(arr, size) {
+	var chunkeyMonkeh = [],
+	i = 0,
+	j = arr.length;
+while (i < j) {
+	chunkeyMonkeh.push(arr.slice(i, i += size));
+	}
+	return chunkeyMonkeh;
+}
 
+chunkArrayInGroups(["a", "b", "c", "d"], 2);
+```
 ##Slasher Flick 
+```javascript
+function slasher(arr, howMany) {
+  return arr.slice(howMany);
+}
+```
+##Mutations 
 
-Mutations 
+##Falsy Bouncer 
 
-Falsy Bouncer 
+##Seek and Destroy 
 
-Seek and Destroy 
+##Where do I belong?
 
-Where do I belong?
-
-Caesars Cipher 
+##Caesars Cipher 
