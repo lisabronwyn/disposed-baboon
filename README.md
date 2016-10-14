@@ -271,3 +271,27 @@ function rot13( str ) {
     } ).join( '' ); // Rejoin the array into a string
 }
 ```
+#BONUS PigLatin Project
+
+After we completed our study goals for this week, we embarked upon our PigLatin project. Here's our function.
+```javascript
+function convertWordToPigLatin(word) {
+  var firstLetter = word.substring(0, 1);
+  var newWord = word.substring(1, word.length) + firstLetter + 'ay';
+  return newWord
+}
+
+function convertSentenceToPigLatin(sentence) {
+  document.getElementById("clickMe").onclick = convertSentenceToPigLatin();
+  var mySentence = sentence.split(" ");
+  var newSentence = ""
+  mySentence.forEach(function(word) {
+    newSentence += convertWordToPigLatin(word) + " ";
+    document.getElementById("translatedText").innerHTML = "newSentence";
+  })
+  return newSentence
+}
+
+
+console.log(convertSentenceToPigLatin("I don't care about you world #nihilism."));
+```
