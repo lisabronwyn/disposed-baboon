@@ -282,16 +282,23 @@ function convertWordToPigLatin(word) {
 }
 
 function convertSentenceToPigLatin(sentence) {
-  document.getElementById("clickMe").onclick = convertSentenceToPigLatin();
   var mySentence = sentence.split(" ");
   var newSentence = ""
   mySentence.forEach(function(word) {
     newSentence += convertWordToPigLatin(word) + " ";
-    document.getElementById("translatedText").innerHTML = "newSentence";
   })
+  document.getElementById("translatedText").innerHTML = newSentence;
   return newSentence
 }
 
+window.addEventListener("load", function() {
 
-console.log(convertSentenceToPigLatin("I don't care about you world #nihilism."));
+  document.getElementById("clickMe").onclick = function() {
+    var sentence = document.getElementById("sentence").value
+    console.log(sentence)
+    var convertedSentence = convertSentenceToPigLatin(sentence)
+  };
+
+}, false)
+
 ```
