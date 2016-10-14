@@ -1,0 +1,168 @@
+body {
+  font-family: "Papyrus";
+  background-color: #ff00ff;
+  font-size: 20px;
+  color: #ff3306
+  align-items: right;
+  display: flex;
+  padding: 2px 1px 0px 0px;
+  margin-top: 20px;
+}
+
+.translatedText {
+  color: #0000ff;
+  font-size: 32px;
+
+}
+modal {
+display: none; /* Hidden by default */
+position: fixed; /* Stay in place */
+z-index: 1; /* Sit on top */
+left: 0;
+top: 0;
+width: 100%; /* Full width */
+height: 100%; /* Full height */
+overflow: auto; /* Enable scroll if needed */
+background-color: rgb(0,0,0); /* Fallback color */
+background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content/Box */
+.modal-content {
+background-color: #FEFEFE;
+margin: 15% auto; /* 15% from the top and centered */
+padding: 20px;
+border: 1px solid #888;
+width: 80%; /* Could be more or less, depending on screen size */
+}
+
+/* The Close Button */
+.close {
+color: #AAA;
+float: right;
+font-size: 28px;
+font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+color: black;
+text-decoration: none;
+cursor: pointer;
+}
+
+.btn {
+  display: inline-block;
+  padding: 6px 12px;
+  margin-bottom: 0;
+  font-size: 14px;
+  font-weight: normal;
+  line-height: 1.428571429;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  cursor: pointer;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+}
+
+.btn-shit {
+  height: 55px;
+  border: 2px solid #25567a;
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 25px;
+  font-weight: 500;
+  border-radius: 30px;
+  letter-spacing: 1px;
+  padding: 10px 40px;
+  box-shadow: 0 22px 40px rgba(0, 0, 0, 0.95), inset 0 2px 0px rgba(255, 255, 255, 0.5);
+  overflow: hidden;
+  background: #15487f;
+  background: -moz-linear-gradient(left, #15487f 0%, #479fd6 100%);
+  background: -webkit-gradient(left top, right top, color-stop(0%, #15487f), color-stop(100%, #479fd6));
+  background: -webkit-linear-gradient(left, #15487f 0%, #479fd6 100%);
+  background: -o-linear-gradient(left, #15487f 0%, #479fd6 100%);
+  background: -ms-linear-gradient(left, #15487f 0%, #479fd6 100%);
+  background: linear-gradient(to right, #15487f 0%, #479fd6 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#15487f', endColorstr='#479fd6', GradientType=1 );
+  line-height: 1.33;
+}
+
+.btn-shit .glare {
+  width: 150%;
+  margin-left: -22%;
+  margin-top: -14px;
+  z-index: 2;
+  height: 28px;
+  border-radius: 50%;
+  background: rgba(0,0,0,1);
+  background: -moz-linear-gradient(top, rgba(0,0,0,1) 0%, rgba(0,0,0,0.49) 51%, rgba(0,0,0,0) 100%);
+  background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(0,0,0,1)), color-stop(51%, rgba(0,0,0,0.49)), color-stop(100%, rgba(0,0,0,0)));
+  background: -webkit-linear-gradient(top, rgba(0,0,0,1) 0%, rgba(0,0,0,0.49) 51%, rgba(0,0,0,0) 100%);
+  background: -o-linear-gradient(top, rgba(0,0,0,1) 0%, rgba(0,0,0,0.49) 51%, rgba(0,0,0,0) 100%);
+  background: -ms-linear-gradient(top, rgba(0,0,0,1) 0%, rgba(0,0,0,0.49) 51%, rgba(0,0,0,0) 100%);
+  background: linear-gradient(to bottom, rgba(0,0,0,1) 0%, rgba(0,0,0,0.49) 51%, rgba(0,0,0,0) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', endColorstr='#000000', GradientType=0 );
+}
+
+.btn-shit:hover, .btn-shit:focus {
+  color: #fff;
+  text-decoration: none;
+  background: #2273A8;
+  background: -moz-linear-gradient(left, #fff000 0%, #009DFF 100%);
+  background: -webkit-gradient(left top, right top, color-stop(0%, #2273A8), color-stop(100%, #009DFF));
+  background: -webkit-linear-gradient(left, #2273A8 0%, #009DFF 100%);
+  background: -o-linear-gradient(left, #2273A8 0%, #009DFF 100%);
+  background: -ms-linear-gradient(left, #2273A8 0%, #009DFF 100%);
+  background: linear-gradient(to right, #2273A8 0%, #009DFF 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fff000', endColorstr='#009DFF', GradientType=1 );
+}
+
+input[type=text] {
+    width: 65%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+}
+
+img {
+  opacity: 0.6;
+  border-radius: 30%;
+  box-shadow: inset 0 -1px 1px rgba(0, 0, 0, 0, 5);
+
+}
+
+p {
+  font-size: 24px;
+  color: #0000ff;
+
+}
+
+h1 {
+  font-family: "Comic Sans MS";
+  color: #ff0000;
+  -webkit-marquee: [direction] [increment] [repetition] [style] [speed]
+}
+
+marquee {
+  font-family: "Curlz MT";
+  font-size: 36px;
+  color: #00ff00;
+  padding: 0 4px 2px 0px;
+}
+
+h2 {
+  font-family: "Comic Sans MS";
+  color: #00ff00;
+  text-align: right;
+  text-decoration:line-through;
+}
+
+
+h3
